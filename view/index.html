@@ -207,6 +207,39 @@
 
         </footer>
     </div>
+    <div id="overlay">
+        <div class="overlay-container">
+            <button id="defaultOpen" class="tablink" onclick="openPage('entry', this, 'black')">Вход</button>
+            <button class="tablink" onclick="openPage('registration', this, 'black')">Регистрация</button>
+            <button class="overlay-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="entry" class="tabcontent">
+                <h4>Вход с Email и парола:</h4>
+                <form id="login-form" action="">
+                    <div>
+                        <input id="username" class="data" name="user" type="text" placeholder="Email или Username (за Дилъри)" />
+                    </div>
+                    <div>
+                        <input id="password" class="data" name="pass" type="password" placeholder="Парола" />
+                    </div>
+                    <div class="remember-forget-container">
+                        <input id="remember-me" name="remember" value="remember" type="checkbox" />
+                        <label style="font-size: 13px" for="remember-me">Запомни ме</label>
+                        <a style="font-size: 13px; margin-left: 5px" href="">Забравена парола?</a>
+                    </div>
+                    <div>
+                        <button id="login-btn">Вход с Email</button>
+                    </div>
+                </form>
+            </div>
+            <div id="registration" class="tabcontent">
+                <h4>Регистрация с Email и парола:</h4>
+
+            </div>
+        </div>
+    </div>
+    <script src="../assets/libraries/overlay.js"></script>
 </body>
 
 </html>
