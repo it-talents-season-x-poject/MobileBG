@@ -37,6 +37,10 @@ body {
     margin-right: 5px; 
 }
 
+.capitalize {
+    text-transform: uppercase;
+}
+
 .main-navigation {
     margin-top: 2em; 
     border-bottom: 5px solid rgb(0, 162, 239);
@@ -92,4 +96,32 @@ main > nav ul > li {
 
 .secondary-navigation > ul > li > a > i:hover {
     color: rgb(0, 144, 198);
+}
+
+.category-search {
+    border: 1px solid rgb(0, 162, 239);
+    border-top:  3px solid rgb(0, 162, 239);
+    display: inline-block;
+    padding: 5px;
+}
+
+.category-search > div {
+    margin-top: 7px;
+}
+
+.icon {
+    position: absolute;
+    font-size: 2em;
+    top: 237px;
+    left: 354px;
+    color: rgb(0, 162, 239);
+}
+
+.search-type {
+    font-weight: bold;
+    display: block;
+}
+
+.red {
+    color: rgb(255, 0, 0);
 }
