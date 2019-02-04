@@ -33,7 +33,7 @@
                         <a href="">Търсене</a>
                     </li>
                     <li>
-                        <a href="">Новини</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://fakti.bg/avto">Новини</a>
                     </li>
                 </ul>
             </nav>
@@ -63,9 +63,9 @@
             </nav>
             <div>
                 <article class="article-search">
-                    <h3>Търсене в
+                    <h5>Търсене в
                         <span>Автомобили и Джипове</span>
-                    </h3>
+                    </h5>
                     <form action="">
                         <div class="category-search">
                             <div>
@@ -79,41 +79,53 @@
                                 <i class="fas fa-car-side icon"></i>
                             </div>
                             <div>
-                                <label for="make" class="search-type">Марка</label>
-                                <select name="make" id="make">
-                                    <option value="all">всички</option>
-                                    <option value="audi">Audi</option>
-                                    <option value="bmv">BMV</option>
-                                </select>
-                                <label for="model" class="search-type">Модел</label>
-                                <select name="model" id="model">
-                                    <option value="all">всички</option>
-                                </select>
+                                <div>
+                                    <label for="make" class="search-type">Марка</label>
+                                    <select name="make" id="make">
+                                        <option value="all">всички</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="bmv">BMV</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="model" class="search-type">Модел</label>
+                                    <select name="model" id="model">
+                                        <option value="all">всички</option>
+                                    </select>
+                                </div>
                             </div>
                             <div>
-                                <label for="max-price" class="search-type">Максимална цена</label>
-                                <input id="max-price" type="text" />
-                                <label for="year" class="search-type">Година</label>
-                                <select name="year" id="year">
-                                    <option value="all">всички</option>
-                                </select>
+                                <div>
+                                    <label for="max-price" class="search-type">Максимална цена</label>
+                                    <input id="max-price" type="text" size="15" maxlength="7"/>
+                                </div>
+                                <div>
+                                    <label for="year" class="search-type">Година</label>
+                                    <select name="year" id="year">
+                                        <option value="all">всички</option>
+                                    </select>
+                                </div>
                             </div>
                             <div>
-                                <label for="engine" class="search-type">Двигател</label>
-                                <select name="engine" id="engine">
-                                    <option value="all" selected>всички</option>
-                                    <option value="petrol">Бензинов</option>
-                                    <option value="diesel">Дизелов</option>
-                                    <option value="electric">Електрически</option>
-                                    <option value="hybrid">Хибриден</option>
-                                </select>
-                                <label for="gearbox" class="search-type">Скоростна кутия</label>
-                                <select name="gearbox" id="gearbox">
-                                    <option value="all">всички</option>
-                                    <option value="manual">Ръчна</option>
-                                    <option value="authomatic">Автоматична</option>
-                                    <option value="semi-authomatic">Полуавтоматична</option>
-                                </select>
+                                <div>
+                                    <label for="engine" class="search-type">Двигател</label>
+                                    <select name="engine" id="engine">
+                                        <option value="all" selected>всички</option>
+                                        <option value="petrol">Бензинов</option>
+                                        <option value="diesel">Дизелов</option>
+                                        <option value="electric">Електрически</option>
+                                        <option value="hybrid">Хибриден</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="gearbox" class="search-type">Скоростна кутия</label>
+                                    <select name="gearbox" id="gearbox">
+                                        <option value="all">всички</option>
+                                        <option value="manual">Ръчна</option>
+                                        <option value="authomatic">Автоматична</option>
+                                        <option value="semi-authomatic">Полуавтоматична</option>
+                                    </select>
+                                </div>
                             </div>
                             <div>
                                 <label for="" class="search-type">Състояние</label>
@@ -123,23 +135,36 @@
                                 <label for="state-used" class="red">Употребяван</label>
                                 <input type="checkbox" name="state-apart" id="state-apart">
                                 <label for="state-apart" class="red">На части</label>
-
                             </div>
                             <div class="detailed-search">
                                 <div>
                                     <p style="display: inline-block">»</p>
                                     <a href="">Подробно търсене</a>
                                 </div>
-                                <button class="capitalize">Търси</button>
+                                <button class="btn-search capitalize">Търси</button>
                             </div>
                         </div>
                     </form>
                 </article>
-                <article>
-                    <!-- <a href="https://fakti.bg/">Новини от Факти.bg</a> -->
+                <article class="news-area">
+                    <h5><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/">Новини от Факти.bg</a></h5>
+                    <div class="news">
+                        <div class="hot-hot-news">
+                            <p><a class="no-decoration" target="_blank" rel="noopener noreferrer"  href="https://fakti.bg/bulgaria/359162-balgarski-politici-na-molitvena-zakuska-pri-tramp">Български политици на молитвена закуска при Тръмп</a></p>
+                            <img src="../assets/images/news1.jpg" alt="bg news">
+                        </div>
+                        <ul class="hot-news">
+                            <li><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/bulgaria/359162-balgarski-politici-na-molitvena-zakuska-pri-tramp">Български политици на молитвена закуска при Тръмп</a></li>
+                            <li><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/world/359215-obir-kato-vav-film-v-sarceto-na-belgia">Обир като във филм в сърцето на Белгия</a></li>
+                            <li><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/biznes/359160-balgaria-pak-posledna-v-evropeiskata-klasacia-za-zaplati">България пак последна в европейската класация за заплати</a></li>
+                            <li><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/imoti/359168-luksoznite-imoti-v-sofia-s-rast-ot-6">Луксозните имоти в София с ръст от 6%</a></li>
+                            <li><a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/avto/359213-mazda2-se-prevrashta-v-toyota-yaris">Mazda2 се превръща в Toyota Yaris</a></li>
+                        </ul>
+                    </div>
                 </article>
                 <article>
-
+                    <div class="users-entrance">
+                    </div>
                 </article>
             </div>
         </main>

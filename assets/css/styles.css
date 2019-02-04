@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
+    font-size: 1em;
 }
 
 #wrapper {
@@ -98,11 +98,24 @@ main > nav ul > li {
     color: rgb(0, 144, 198);
 }
 
+article {
+    display: inline-block;
+}
+
+select {
+    width: 128px;
+}
+
+#category {
+    width: 172px;
+}
+
 .category-search {
     border: 1px solid rgb(0, 162, 239);
     border-top:  3px solid rgb(0, 162, 239);
     display: inline-block;
     padding: 5px;
+    font-size: 12px;
 }
 
 .category-search > div {
@@ -112,16 +125,79 @@ main > nav ul > li {
 .icon {
     position: absolute;
     font-size: 2em;
-    top: 237px;
-    left: 354px;
+    top: 259px;
+    left: 365px;
     color: rgb(0, 162, 239);
 }
 
 .search-type {
     font-weight: bold;
     display: block;
+    font-size: 12px;
 }
 
 .red {
     color: rgb(255, 0, 0);
+}
+
+.category-search > div > div {
+    display: inline-block;
+    width: 49%;
+}
+
+.btn-search {
+    margin-left: 40px;
+}
+
+.news-area {
+    margin-left: 30px;
+    width: 26vw;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.news-area > h5 > a {
+    color: rgb(0, 0, 0);
+}
+
+.news {
+    border-bottom: 1px solid rgb(0, 162, 239);
+    border-top:  3px solid rgb(0, 162, 239);
+}
+
+.hot-hot-news {
+    padding-left: 10px;
+}
+
+.hot-hot-news > p {
+    font-weight: bold;
+    display: inline-block; 
+    width: 30%;  
+}
+
+.hot-hot-news > p > a {
+    color: rgb(0, 0, 0);
+}
+
+.hot-hot-news > img {
+    width: 8vw;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.hot-news {
+    list-style-type: square;
+    color: rgb(151, 150, 150);
+    border-top: 1px solid rgb(151, 150, 150);
+}
+
+.hot-news > li > a {
+    color: rgb(151, 150, 150);
+    font-size: 11px;
+}
+
+.hot-news > li > a:hover {
+    text-decoration: underline;
 }
