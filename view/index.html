@@ -223,19 +223,36 @@
                     <div>
                         <input id="password" class="data" name="pass" type="password" placeholder="Парола" />
                     </div>
-                    <div class="remember-forget-container">
+                    <div class="agree-container">
                         <input id="remember-me" name="remember" value="remember" type="checkbox" />
                         <label style="font-size: 13px" for="remember-me">Запомни ме</label>
                         <a style="font-size: 13px; margin-left: 5px" href="">Забравена парола?</a>
                     </div>
                     <div>
-                        <button id="login-btn">Вход с Email</button>
+                        <button id="login-btn" class="btn-style">Вход с Email</button>
                     </div>
                 </form>
             </div>
             <div id="registration" class="tabcontent">
                 <h4>Регистрация с Email и парола:</h4>
-
+                <form id="register-form" action="">
+                    <div id="email-container">
+                        <input id="email" class="data" name="email" type="text" placeholder="Email" />
+                    </div>
+                    <div id="password-container">
+                        <input id="pass" class="data" name="user-pass" type="password" placeholder="Парола" />
+                    </div>
+                    <div id="repeat-pass-container">
+                        <input id="repeat-pass" class="data" name="repeat-pass" type="password" placeholder="Повтори паролата" />
+                    </div>
+                    <div class="agree-container">
+                        <input id="agree" name="agreed" value="agreed" type="checkbox" />
+                        <label style="font-size: 13px" for="agree">Съгласен съм с общите условия</label>
+                    </div>
+                    <div>
+                        <button id="register-btn" class="btn-style">Регистрация с Email</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
