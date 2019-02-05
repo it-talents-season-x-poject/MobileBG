@@ -8,6 +8,7 @@
     <title>mobile.bg</title>
     <link rel="stylesheet" href="../assets/css/font-awesome.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../controler/cars.js"></script>
 </head>
 
 <body>
@@ -190,7 +191,7 @@
                                         <em>(отнема само 2 мин.)</em>
                                     </p>
                                 </div>
-                                <a class="entrance-btn capitalize" href="">Вход</a>
+                                <a id="entry-btn" class="entrance-btn capitalize" href="">Вход</a>
                             </div>
                             <div class="ad-edit">
                                 <i class="fas fa-edit"></i>
@@ -211,7 +212,7 @@
         <div class="overlay-container">
             <button id="defaultOpen" class="tablink" onclick="openPage('entry', this, 'black')">Вход</button>
             <button class="tablink" onclick="openPage('registration', this, 'black')">Регистрация</button>
-            <button class="overlay-close-btn">
+            <button id="overlay-close-btn" class="overlay-close-btn">
                 <i class="fas fa-times"></i>
             </button>
             <div id="entry" class="tabcontent">
