@@ -10,6 +10,5 @@ function openPage(pageName,element,color) {
     }
     document.getElementById(pageName).style.display = "block";
     element.style.color = color;
+    document.getElementById('overlay').style.display = 'block';
   }
-  
-  document.getElementById("defaultOpen").click();

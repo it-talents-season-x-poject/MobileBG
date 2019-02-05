@@ -100,6 +100,7 @@ main > nav ul > li {
 
 article {
     float: left;
+    width: 24%;
 }
 
 select {
@@ -113,7 +114,6 @@ select {
 .category-search {
     border: 1px solid rgb(0, 162, 239);
     border-top:  3px solid rgb(0, 162, 239);
-    display: inline-block;
     padding: 5px;
     font-size: 12px;
 }
@@ -123,11 +123,9 @@ select {
 }
 
 .icon {
-    position: absolute;
     font-size: 2em;
-    top: 259px;
-    left: 365px;
     color: rgb(0, 162, 239);
+    margin-left: 15px;
 }
 
 .search-type {
@@ -204,7 +202,7 @@ select {
 
 .entrance {
     margin-left: 30px;
-    margin-top: 52px;
+    margin-top: 59px;
 }
 
 .entrance-container {
@@ -214,7 +212,6 @@ select {
 .users-entrance {
     border: 1px solid  rgb(151, 150, 150);
     width: 29vw;
-    height: 37vh;
 }
 
 .users-entrance > p {
@@ -244,8 +241,7 @@ select {
     margin: 20px auto;
 }
 
-.right-side {
-    position: absolute;
+.transitioned-right {
     transform: scaleX(-1);
 }
 
@@ -272,13 +268,17 @@ select {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 33%;
+    width: 42%;
   }
 
 .overlay-container {
     background-color: rgb(255, 255, 255);
-    width: 50%;
+    width: 21%;
     margin: 50px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .overlay-close-btn {
@@ -286,30 +286,29 @@ select {
     float: right;
 }
 
-.tablink {
-    background-color: rgb(255, 255, 255);
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
 .tabcontent {
     color: rgb(0, 0, 0);
     display: none;
-    padding: 100px 20px;
+    padding: 40px 20px;
     height: 100%;
 }
 
 .data {
     width: 20em;
+    padding: 5px;
+    margin: 5px 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);  
 }
 
 #login-form > div > a {
     color: rgb(0, 162, 239);
+}
+
+.submit-btn-container {
+    text-align: center;
 }
 
 .btn-style {
@@ -318,9 +317,8 @@ select {
     border-radius: 5px;
     border: 1px solid  rgb(0, 162, 239);
     padding: 10px 15px;
-    margin-left: 65px;
 }
 
 .agree-container {
-    margin: 5px;
+    margin: 10px 0px;
 }
