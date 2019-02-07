@@ -8,7 +8,7 @@ function openPage(pageName,element,color) {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].style.color = "rgb(0, 162, 239)";
     }
-    document.getElementById(pageName).style.display = "block";
+    document.getElementById(pageName).style.display = "flex";
     element.style.color = color;
-    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('overlay').style.display = 'flex';
   }

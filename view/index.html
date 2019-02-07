@@ -220,11 +220,13 @@
     </div>
     <div id="overlay">
         <div class="overlay-container">
-            <button id="login-tab" class="tablink" onclick="openPage('entry', this, 'black')">Вход</button>
-            <button class="tablink" onclick="openPage('registration', this, 'black')" id="register-tab">Регистрация</button>
-            <button id="overlay-close-btn" class="overlay-close-btn">
-                <i class="fas fa-times"></i>
-            </button>
+            <div class="overlay-navigation">
+                <button id="login-tab" class="tablink" onclick="openPage('entry', this, 'black')">Вход</button>
+                <button class="tablink" onclick="openPage('registration', this, 'black')" id="register-tab">Регистрация</button>
+                <button id="overlay-close-btn" class="overlay-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             <div id="entry" class="tabcontent">
                 <h4>Вход с Email и парола:</h4>
                 <form id="login-form" action="">
