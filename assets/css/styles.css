@@ -6,6 +6,10 @@ body {
     flex-wrap: wrap;
 }
 
+h5 {
+    margin: 0.5em 0;
+}
+
 #wrapper {
     display: flex;
     width: 80%;
@@ -256,15 +260,15 @@ article {
     flex-direction: row;
 }
 
-.hot-hot-news > p {
+.hot-hot-news p {
     font-weight: bold;
 }
 
-.hot-hot-news > p > a {
+.hot-hot-news a {
     color: rgb(0, 0, 0);
 }
 
-.hot-hot-news > img {
+.hot-hot-news img {
     max-width:230px;
     max-height:95px;
     width: auto;
@@ -288,9 +292,13 @@ article {
     text-decoration: underline;
 }
 
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+}
+
 .entrance {
     margin-left: 30px;
-    margin-top: 59px;
+    margin-top: 1.7em;
 }
 
 .entrance-container {
@@ -402,11 +410,6 @@ article {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.overlay-close-btn {
-    /* position: relative;
-    float: right; */
 }
 
 .tabcontent {
