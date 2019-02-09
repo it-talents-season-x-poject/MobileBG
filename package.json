@@ -1,0 +1,23 @@
+{
+  "name": "mobilebg",
+  "version": "1.0.0",
+  "description": "mobilebg project for educational purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-talents-season-x-project/MobileBG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/it-talents-season-x-project/MobileBG/issues"
+  },
+  "homepage": "https://github.com/it-talents-season-x-project/MobileBG#readme",
+  "dependencies": {
+    "handlebars": "^4.1.0",
+    "jquery": "^3.3.1"
+  }
+}

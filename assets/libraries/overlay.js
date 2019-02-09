@@ -1,14 +1,17 @@
 function openPage(pageName,element,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.color = "rgb(0, 162, 239)";
-    }
-    document.getElementById(pageName).style.display = "flex";
-    element.style.color = color;
-    document.getElementById('overlay').style.display = 'flex';
+  var i, tabcontent, tablinks;
+  tabcontent = $('.tabcontent');
+  for (i = 0; i < tabcontent.length; i++) {
+    $(tabcontent[i]).css('display', 'none');
   }
+
+  tablinks = $('.tablink');
+
+  for (i = 0; i < tablinks.length; i++) {
+    $(tablinks[i]).css('color', 'rgb(0, 162, 239)');
+  }
+
+  $(`#${pageName}`).css('display', 'flex');
+  $(element).css('color', color);
+  $('#overlay').css('display', 'flex');
+}
