@@ -1,2 +1,2 @@
 # MobileBG
-For educational purposes
+A project for educational purposes
