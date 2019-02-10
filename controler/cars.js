@@ -8,7 +8,8 @@ $(function() {
         $('#gear').append(`<option value="${num}">${num}</option>`);
     }
 
-    $('#gear').append(`<option value="${'nospeeds'}">${'без скорости'}</option>`)
+    $('#gear').append(`<option value="${'nospeeds'}">${'без скорости'}</option>`);
+    $('.secondary-navigation > ul > li > a > i.cars').css('color', 'rgb(0, 144, 198)');
 
     for (let i = 0; i < TOWNS.length; i++) {
         $('#city').append(`<option value="${i+1}">${TOWNS[i]}</option>`);
@@ -23,6 +24,7 @@ $(function() {
     }
    
     $('#category').on('change', function() {
+        $('.secondary-navigation > ul > li > a > i').css('color', 'rgb(128, 200, 227)');
         var category = $('#category').val();
         var makeSelect = $('#make');
         $(makeSelect).html(DEFAULT_OPTION);
@@ -46,6 +48,7 @@ $(function() {
         }
 
         $('.article-search select:not(#category)').val('all');
+        $(`.secondary-navigation > ul > li > a > i.${category}`).css('color', 'rgb(0, 144, 198)');
     });
 
     $('#make').on('change', function() {
