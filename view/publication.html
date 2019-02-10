@@ -14,6 +14,7 @@
     <script src="../model/storage.js"></script>
     <script src="../model/availableCarsStorage.js"></script>
     <script src="../controler/cars.js"></script>
+    <script src="../model/properties.js"></script>
 </head>
 
 <body>
@@ -206,4 +207,34 @@
                                                             </select>
                                                         </div>
                                                 </div>
+                <div id="properties" height="300px">
+                        <div id="flags"></div>
+                    </div>
+
+                <div>
+                <div style="width:22%">
+                <label for="Info" class="search-type">  Допълнителна информация </label>
+                <textarea cols="36" name="f24" rows="10" wrap="virtual" maxlength="5500" class="sw300" ></textarea>
+                <p>Моля, не пишете телефони в това поле!
+                        Ако желате да публикувате повече от един телефон в обявата си, направете я VIP или ТОП.</p>
+                </div>
+                <div style="width:40%;margin-left:25px;">
+                        <label for="Info" class="search-type">  Вашите данни за обратна връзка </label>
+                        <form id="register-form" action="">
+                                <label style="margin-top: 5px" for="Phone" class="search-type">  Phone Number</label>
+                                <div style="justify-content: center;" id="phone-container">
+                                    <input id="phone" type="text" placeholder="Phone" />
+                                </div>
+                                <label style="margin-top: 5px" for="Email" class="search-type">  Email </label>
+                                <div style="justify-content:center;" id="email-container">
+                                        <input id="email" type="email" placeholder="Email" />
+
+                                </div>
+                        </form>
+
+                </div>
+                <div>
+                    <label ><input type="checkbox" name="chkcond" value="1"> Съгласен съм с <a href="//www.mobile.bg/pcgi/mobile.cgi?act=9&amp;mode=4" class="iconLinks" target="_blank">условията за ползване на сайта</a> и <a href="//www.mobile.bg/pcgi/mobile.cgi?act=9&amp;mode=6" class="iconLinks" target="_blank">Политиката за защита на личните данни</a></label>
+                    <button style="margin-top:60px" width="100px" id="publish">Публикувай текстта</button>
+                </div>
             </div>
