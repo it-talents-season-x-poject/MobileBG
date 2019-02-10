@@ -60,4 +60,86 @@ $(function() {
     $('#overlay-close-btn').on('click', function() {
         $('#overlay').css('display', 'none');
     });
+
+    $("#cars").on("click",function(event){
+        var category="cars"
+        $("select#category").val("cars");
+        var makeSelect = $('#make');
+        $(makeSelect).html(DEFAULT_OPTION);
+        $('#search-title').text(categories[category]);
+        for (let make in makes[category]) {           
+            makeSelect.append($(`<option value="${make}">${makes[category][make]}</option>`));
+        }
+
+        $('.icon-container > i').attr('class', `${vehicleIcons[category]} icon`);
+
+        $('.engine-container').css('display', 'flex');
+        $('.city-container').css('display', 'none');
+        $('.gearbox-container').css('display', 'flex');
+        $('.gear-container').css('display', 'none');
+
+        $('.article-search select:not(#category)').val('all');
+    });
+
+    $("#trucks").on("click",function(event){
+        var category='trucks';
+        $("select#category").val("trucks");
+        var makeSelect = $('#make');
+        $(makeSelect).html(DEFAULT_OPTION);
+        $('#search-title').text(categories[category]);
+        for (let make in makes[category]) {           
+            makeSelect.append($(`<option value="${make}">${makes[category][make]}</option>`));
+        }
+
+        $('.icon-container > i').attr('class', `${vehicleIcons[category]} icon`);
+
+        $('.engine-container').css('display', 'flex');
+        $('.city-container').css('display', 'none');
+        $('.gearbox-container').css('display', 'flex');
+        $('.gear-container').css('display', 'none');
+
+        $('.article-search select:not(#category)').val('all');
+    })
+
+    $("#motorcycles").on("click",function(event){
+        var category="motorcycles"
+        $("select#category").val("motorcycles");
+        var makeSelect = $('#make');
+        $(makeSelect).html(DEFAULT_OPTION);
+        $('#search-title').text(categories[category]);
+        for (let make in makes[category]) {           
+            makeSelect.append($(`<option value="${make}">${makes[category][make]}</option>`));
+        }
+
+        $('.icon-container > i').attr('class', `${vehicleIcons[category]} icon`);
+        
+        $('.engine-container').css('display', 'flex');
+        $('.city-container').css('display', 'none');
+        $('.gearbox-container').css('display', 'flex');
+        $('.gear-container').css('display', 'none');
+
+        $('.article-search select:not(#category)').val('all');
+    });
+
+    $("#bicycles").on("click",function(event){
+        var category="bicycles"
+        $("select#category").val("bicycles");
+        var makeSelect = $('#make');
+        $(makeSelect).html(DEFAULT_OPTION);
+        $('#search-title').text(categories[category]);
+        for (let make in makes[category]) {           
+            makeSelect.append($(`<option value="${make}">${makes[category][make]}</option>`));
+        }
+
+        $('.icon-container > i').attr('class', `${vehicleIcons[category]} icon`);
+
+        $('.engine-container').css('display', 'none');
+        $('.city-container').css('display', 'flex');
+        $('.gearbox-container').css('display', 'none');
+        $('.gear-container').css('display', 'flex');
+
+        $('.article-search select:not(#category)').val('all');
+
+
+    });
 });
