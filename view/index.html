@@ -14,6 +14,7 @@
     <script src="../model/storage.js"></script>
     <script src="../model/availableCarsStorage.js"></script>
     <script src="../controler/cars.js"></script>
+    <script src="../controler/user.js"></script>
 </head>
 
 <body>
@@ -32,13 +33,13 @@
             <nav class="main-navigation">
                 <ul>
                     <li>
-                        <a href="">Начало</a>
+                        <a href="#">Начало</a>
                     </li>
                     <li>
-                        <a href="">Публикуване</a>
+                        <a href="#">Публикуване</a>
                     </li>
                     <li>
-                        <a href="">Търсене</a>
+                        <a href="#">Търсене</a>
                     </li>
                     <li>
                         <a target="_blank" rel="noopener noreferrer" href="https://fakti.bg/avto">Новини</a>
@@ -248,6 +249,9 @@
                                 </div>
                                 <a id="entry-btn" class="entrance-btn capitalize" href="#" onclick="openPage('entry', document.getElementById('login-tab'), 'black')">Вход</a>
                             </div>
+                            <div style="display: none" class="logged-user-data">
+                                <p>You are logged in with <span id="logged-username"></span>!</p>
+                            </div>
                             <div class="ad-edit">
                                 <i class="fas fa-edit"></i>
                                 <a style="color: black" href="">Редакция на обява</a>
@@ -317,12 +321,16 @@
                 <form id="register-form" action="">
                     <div id="email-container">
                         <input id="email" class="data" name="email" type="text" placeholder="Email" />
+                        <p class="error"></p>
                     </div>
                     <div id="password-container">
-                        <input id="pass" class="data" name="user-pass" type="password" placeholder="Парола" />
+                        <p class="red important-message">Паролата трябва да съдържа малка, голяма буква, число и да е минимум 8 символа!</p>
+                        <input id="pass" class="data" name="user-pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Парола" />
+                        <p class="error"></p>
                     </div>
                     <div id="repeat-pass-container">
                         <input id="repeat-pass" class="data" name="repeat-pass" type="password" placeholder="Повтори паролата" />
+                        <p class="error"></p>
                     </div>
                     <div class="agree-container">
                         <input id="agree" name="agreed" value="agreed" type="checkbox" />

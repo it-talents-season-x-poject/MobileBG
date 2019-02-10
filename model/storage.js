@@ -1,22 +1,36 @@
 var userStorage = (function() {
+    var num = 1;
+
     class User {
         constructor(email, password) {
+            this.id = num++;
             this.email = email;
             this.password = password;
         }
     }
 
-    var userList = [];
+    var userList = localStorage.getItem('userList') ? JSON.parse(localStorage.getItem('userList')) : [];
 
     return {
         login: function (email, password) {
-            return userList.find(u => u.email === email && u.password === password);
+            let currentUser = userList.find(u => u.email === email && u.password === password);
+            if (currentUser) {
+                this.addUserToLocalSesstion(currentUser.id);
+            }
+            
+            return currentUser;
         },
 
         register: function (email, password) {
-            userList.push(new User(email, password));
-            localStorage.setItem('userList', JSON.stringify(userList));         
-        }
+            let currentUser = new User(email, password);
+            userList.push(currentUser);
+            localStorage.setItem('userList', JSON.stringify(userList));   
+            this.addUserToLocalSesstion(currentUser.id);
+        },
+
+        addUserToLocalSesstion: id => sessionStorage.setItem('loggedUserId', id),
+
+        retrieveLoggedUserData: () => userList.find(u => u.id === +sessionStorage.getItem('loggedUserId'))
     }
 })();
 
