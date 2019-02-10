@@ -1,7 +1,7 @@
 var userStorage = (function() {
     class User {
         constructor(email, password) {
-            this.emil = email;
+            this.email = email;
             this.password = password;
         }
     }
@@ -19,3 +19,32 @@ var userStorage = (function() {
         }
     }
 })();
+
+
+
+var vehicleStorage = (function(){
+    class Vehicle{
+        constructor(title, image, price, kilometres, city){
+            this.title=title;
+            this.image=image;
+            this.price=price;
+            this.kilometres=kilometres;
+            this.city=city;
+            this.date=new Date();
+        }
+    }
+
+        var carList=[];
+        var busList=[];
+        var truckList=[];
+    
+    return{
+        addVehicle: function(title,img,price,kilometres,city){
+            return 
+        }
+    }
+    
+    
+
+})();
+

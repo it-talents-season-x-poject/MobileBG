@@ -463,3 +463,7 @@ article {
 .agree-container {
     margin: 10px 0px;
 }
+
+#priceContainer {
+    flex-direction: row;
+}
