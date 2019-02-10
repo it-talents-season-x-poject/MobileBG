@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mobile.bg</title>
+    <link rel="stylesheet" href="../assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="../assets/libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/libraries/handlebars-v4.1.0.js"></script>
+    <script src="../assets/libraries/jQuery.js"></script>
+    <script src="../model/storage.js"></script>
+    <script src="../model/availableCarsStorage.js"></script>
+    <script src="../controler/cars.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="../assets/images/logo.gif" alt="logo">
+            </div>
+            <div class="btn-container">
+                <a class="edit-btn" href="">Редакция на обява</a>
+                <a class="add-btn capitalize" href="">
+                    <i class="fas fa-plus"></i>Добави обява</a>
+            </div>
+        </header>
+        <main>
+            <nav class="main-navigation">
+                <ul>
+                    <li>
+                        <a href="">Начало</a>
+                    </li>
+                    <li>
+                        <a href="">Публикуване</a>
+                    </li>
+                    <li>
+                        <a href="">Търсене</a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://fakti.bg/avto">Новини</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="articles">
+                    <article class="article-search">
+                        <h5>Търсене в
+                            <span id="search-title">Автомобили и Джипове</span>
+                        </h5>
+                        <form action="">
+                            <div class="category-search">
+                                <div class="category-container">
+                                    <div class="category-selector-container">
+                                        <label for="category" class="search-type">Основна Категория</label>
+                                        <select name="category" id="category">
+                                            <option selected value="cars">Автомобили и Джипове</option>
+                                            <option value="trucks">Камиони</option>
+                                            <option value="motorcycles">Мотоциклети</option>
+                                            <option value="bicycles">Велосипеди</option>
+                                        </select>
+                                    </div>
+                                    <div class="icon-container">
+                                        <i class="fas fa-car-side icon"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="make" class="search-type">Марка</label>
+                                        <select name="make" id="make">
+                                            <option value="all" selected>всички</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="model" class="search-type">Модел</label>
+                                        <select name="model" id="model">
+                                            <option value="all" selected>всички</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="priceContainer">
+                                        <label for="max-price" class="search-type" >Цена</label>
+                                        От<input id="min-price" type="text" size="15" maxlength="7" />
+                                        До<input id="max-price" type="text" size="15" maxlength="7" />
+                                    </div>
+                                    <div>
+                                        <label for="year" class="search-type">Година</label>
+                                        <select name="year" id="year">
+                                            <option value="all">всички</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="engine-container">
+                                        <label for="engine" class="search-type">Двигател</label>
+                                        <select name="engine" id="engine">
+                                            <option value="all" selected>всички</option>
+                                            <option value="petrol">Бензинов</option>
+                                            <option value="diesel">Дизелов</option>
+                                            <option value="electric">Електрически</option>
+                                            <option value="hybrid">Хибриден</option>
+                                        </select>
+                                    </div>
+                                    <div style="display: none" class="city-container">
+                                        <label for="city" class="search-type">Местоположение</label>
+                                        <select name="city" id="city">
+                                            <option value="all" selected>всички</option>
+                                        </select>
+                                    </div>
+                                    <div class="gearbox-container">
+                                        <label for="gearbox" class="search-type">Скоростна кутия</label>
+                                        <select name="gearbox" id="gearbox">
+                                            <option value="all" selected>всички</option>
+                                            <option value="manual">Ръчна</option>
+                                            <option value="authomatic">Автоматична</option>
+                                            <option value="semi-authomatic">Полуавтоматична</option>
+                                        </select>
+                                    </div>
+                                    <div style="display: none" class="gear-container">
+                                        <label for="gear" class="search-type">Скорости</label>
+                                        <select name="gear" id="gear">
+                                            <option value="all" selected>всички</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="condition-container">
+                                    <div>
+                                        <label for="" class="search-type">Състояние</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="state-new" id="state-new">
+                                        <label for="state-new" class="red">Нов</label>
+                                        <input type="checkbox" name="state-used" id="state-used">
+                                        <label for="state-used" class="red">Употребяван</label>
+                                        <input type="checkbox" name="state-apart" id="state-apart">
+                                        <label for="state-apart" class="red">На части</label>
+                                    </div>
+                                </div>
+                                <div class="detailed-search">
+                                    <div>
+                                        »
+                                        <a href="">Подробно търсене</a>
+                                    </div>
+                                    <button class="btn-search capitalize">Търси</button>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
