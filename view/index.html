@@ -12,6 +12,7 @@
     <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../model/storage.js"></script>
+    <script src="../model/availableCarsStorage.js"></script>
     <script src="../controler/cars.js"></script>
 </head>
 
@@ -71,7 +72,7 @@
             <div class="articles">
                 <article class="article-search">
                     <h5>Търсене в
-                        <span>Автомобили и Джипове</span>
+                        <span id="search-title">Автомобили и Джипове</span>
                     </h5>
                     <form action="">
                         <div class="category-search">
@@ -93,15 +94,13 @@
                                 <div>
                                     <label for="make" class="search-type">Марка</label>
                                     <select name="make" id="make">
-                                        <option value="all">всички</option>
-                                        <option value="audi">Audi</option>
-                                        <option value="bmv">BMV</option>
+                                        <option value="all" selected>всички</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label for="model" class="search-type">Модел</label>
                                     <select name="model" id="model">
-                                        <option value="all">всички</option>
+                                        <option value="all" selected>всички</option>
                                     </select>
                                 </div>
                             </div>
@@ -118,7 +117,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div>
+                                <div class="engine-container">
                                     <label for="engine" class="search-type">Двигател</label>
                                     <select name="engine" id="engine">
                                         <option value="all" selected>всички</option>
@@ -128,13 +127,25 @@
                                         <option value="hybrid">Хибриден</option>
                                     </select>
                                 </div>
-                                <div>
+                                <div style="display: none" class="city-container">
+                                    <label for="city" class="search-type">Местоположение</label>
+                                    <select name="city" id="city">
+                                        <option value="all" selected>всички</option>
+                                    </select>
+                                </div>
+                                <div class="gearbox-container">
                                     <label for="gearbox" class="search-type">Скоростна кутия</label>
                                     <select name="gearbox" id="gearbox">
-                                        <option value="all">всички</option>
+                                        <option value="all" selected>всички</option>
                                         <option value="manual">Ръчна</option>
                                         <option value="authomatic">Автоматична</option>
                                         <option value="semi-authomatic">Полуавтоматична</option>
+                                    </select>
+                                </div>
+                                <div style="display: none" class="gear-container">
+                                    <label for="gear" class="search-type">Скорости</label>
+                                    <select name="gear" id="gear">
+                                        <option value="all" selected>всички</option>
                                     </select>
                                 </div>
                             </div>
@@ -195,7 +206,8 @@
                                     </div>
                                     <div class="carousel-item">
                                         <p>
-                                            <a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/bulgaria/359162-balgarski-politici-na-molitvena-zakuska-pri-tramp"> Очаква се Mazda2 да се преврне в Toyota Yaris</a>
+                                            <a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/bulgaria/359162-balgarski-politici-na-molitvena-zakuska-pri-tramp">
+                                            Очаква се Mazda2 да се преврне в Toyota Yaris</a>
                                         </p>
                                         <img class="d-block w-100" src="../assets/images/news5.jpg" alt="Fifth slide">
                                     </div>
