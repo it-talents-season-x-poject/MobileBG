@@ -360,6 +360,21 @@ article {
     margin-top: 20px;
 }
 
+.ad-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-container > h5 {
+    align-self: center;
+}
+
+.last-ad-container {
+    border-top: 5px solid rgb(0, 162, 239);
+    display: flex;
+}
+
 #overlay {
     position: fixed;
     display: none;
