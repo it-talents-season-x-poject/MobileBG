@@ -65,9 +65,12 @@ $(function () {
         if (user) {
             $('#overlay').hide();
             handleLoggedUser(user);
+            $('#login-form .error').text('');
         } else {
-            $('.error').text('Wrong!');
+            $('#login-form .error').text('Invalid data!');
         }
+
+        $('#login-form')[0].reset();
     });
 });
 

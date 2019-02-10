@@ -448,6 +448,10 @@ article {
     color: rgb(0, 162, 239);
 }
 
+#login-btn, #register-btn {
+    cursor: pointer
+}
+
 .submit-btn-container {
     justify-content: center;
 }
