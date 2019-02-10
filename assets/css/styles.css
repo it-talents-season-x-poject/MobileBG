@@ -150,7 +150,6 @@ article {
 .category-search > div > div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     flex: 1;
 }
 
@@ -480,4 +479,19 @@ article {
     margin-top: 10px;
     margin-bottom: 10px;
 
+}
+
+div#flags {
+    width: 100%;
+    flex-direction: row;
+}
+
+div#flags label {
+    float: left;
+    width: 100%;
+}
+
+div#flags div {
+    width: 300px;
+    float: left;
 }
