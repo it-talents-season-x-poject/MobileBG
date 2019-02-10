@@ -147,6 +147,11 @@ $(function() {
 
     });
 
+    $('.secondary-navigation a').on('click', function(event) {
+        event.preventDefault();
+        $('#category').val($(this).data('category')).change();
+    });
+
     // $(".(fas fa-car-side cars)").click(function(event){
     //     var category="cars";
     //     $("select#category").val("cars");
