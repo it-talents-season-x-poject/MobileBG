@@ -37,8 +37,11 @@ var userStorage = (function () {
 
 
 var vehicleStorage = (function () {
+    var num = 1;
+
     class Vehicle {
         constructor(title, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation) {
+            this.id = num++;
             this.title = title;
             this.image = image;
             this.price = price;
@@ -79,6 +82,12 @@ var vehicleStorage = (function () {
         addVehicle: function (title, img, price, kilometres, city) {
             return
         },
+
+        getLastCars: (n) => {
+           let currentCarList = carList.slice();
+           currentCarList.sort((c1, c2) => c2.id - c1.id);
+           return currentCarList.slice(0, n);
+        }
     }
 })();
 
