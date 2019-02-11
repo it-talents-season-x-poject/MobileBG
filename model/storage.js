@@ -38,19 +38,25 @@ var userStorage = (function() {
 
 var vehicleStorage = (function(){
     class Vehicle{
-        constructor(title, image, price, kilometres, city){
-            this.title=title;
-            this.image=image;
-            this.price=price;
-            this.kilometres=kilometres;
-            this.city=city;
-            this.date=new Date();
+        constructor(title, image, price, kilometres, city, manufacturedDate, engine, gearbox, color, moreInformation) {
+            this.title = title;
+            this.image = image;
+            this.price = price;
+            this.kilometres = kilometres;
+            this.city = city;
+            this.manufacturedDate = manufacturedDate;
+            this.engine = engine;
+            this.gearbox = gearbox;
+            this.color = color;
+            this.moreInformation = moreInformation;
+            this.date = new Date();
         }
     }
 
-        var carList=[];
-        var busList=[];
-        var truckList=[];
+        var carList = [];
+        var motorcycleList = [];
+        var truckList = [];
+        var bicyckleList = [];
     
     return{
         addVehicle: function(title,img,price,kilometres,city){
