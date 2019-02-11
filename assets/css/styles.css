@@ -558,7 +558,7 @@ div#flags div {
 }
 
 #main-categories > button {
-    background-color: lightgrey; /* Green */
+    background-color: lightgrey; 
     border: none;
     color: black;
     padding:10px;
@@ -566,6 +566,7 @@ div#flags div {
     display: inline-block;
     font-family: "Times New Roman", Times, serif;
     border-radius: 5px;
+<<<<<<< Updated upstream
     cursor: pointer;
 }
 
@@ -595,4 +596,27 @@ div#flags div {
 .car-name {
     margin-top: 0;
     font-weight: bold;
+=======
+}
+
+#search{
+    width:400px;
+    height: 50px;
+    border-radius: 5px;
+    right:0;
+    bottom:0;
+    float: right;
+}
+
+.category-container-search {
+    display: flex;
+    flex-direction: row;
+    flex:1;
+
+}
+
+.category-search{
+    flex-direction: column;
+    flex:1;
+>>>>>>> Stashed changes
 }
