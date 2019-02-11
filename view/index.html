@@ -65,7 +65,7 @@
                     </li>
                     <li>
                         <a href="#" data-category="bicycles">
-                            <i class="fas fa-bicycle bicycles" ></i>
+                            <i class="fas fa-bicycle bicycles"></i>
                         </a>
                     </li>
                 </ul>
@@ -208,7 +208,7 @@
                                     <div class="carousel-item">
                                         <p>
                                             <a class="no-decoration" target="_blank" rel="noopener noreferrer" href="https://fakti.bg/bulgaria/359162-balgarski-politici-na-molitvena-zakuska-pri-tramp">
-                                            Очаква се Mazda2 да се преврне в Toyota Yaris</a>
+                                                Очаква се Mazda2 да се преврне в Toyota Yaris</a>
                                         </p>
                                         <img class="d-block w-100" src="../assets/images/news5.jpg" alt="Fifth slide">
                                     </div>
@@ -250,11 +250,15 @@
                                 <a id="entry-btn" class="entrance-btn capitalize" href="#" onclick="openPage('entry', document.getElementById('login-tab'), 'black')">Вход</a>
                             </div>
                             <div style="display: none" class="logged-user-data">
-                                <p>You are logged in with <span id="logged-username"></span>!</p>
+                                <p>You are logged in with
+                                    <span id="logged-username"></span>!</p>
                             </div>
                             <div class="ad-edit">
-                                <i class="fas fa-edit"></i>
-                                <a style="color: black" href="">Редакция на обява</a>
+                                <div>
+                                    <i class="fas fa-edit"></i>
+                                    <a style="color: black" href="">Редакция на обява</a>
+                                </div>
+                                <a style="display: none;" href="#" id="log-out">log out</a>
                             </div>
                             <div class="cars-container">
                                 <img width="180" src="../assets/images/bmw.png" alt="bmw" />
@@ -269,7 +273,7 @@
                 <article class="last-ad-container"></article>
             </div>
         </main>
-        <footer >
+        <footer>
             <div id="main-categories">
                 <p>Основни категории в mobile.bg</p>
                 <button id="cars">Автомобили и джипове</button>
@@ -326,7 +330,8 @@
                     </div>
                     <div id="password-container">
                         <p class="red important-message">Паролата трябва да съдържа малка, голяма буква, число и да е минимум 8 символа!</p>
-                        <input id="pass" class="data" name="user-pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Парола" />
+                        <input id="pass" class="data" name="user-pass" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Парола"
+                        />
                         <p class="error"></p>
                     </div>
                     <div id="repeat-pass-container">

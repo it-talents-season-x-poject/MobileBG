@@ -375,6 +375,12 @@ article {
     display: flex;
 }
 
+.ad-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #overlay {
     position: fixed;
     display: none;

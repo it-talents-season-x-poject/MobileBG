@@ -5,6 +5,7 @@ $(function () {
         $('#logged-username').text(loggedUser.email);
         $('.entry-reg-container').hide();
         $('.logged-user-data').show();
+        $('#log-out').show();
     }
 
     const loggedUser = userStorage.retrieveLoggedUserData();
@@ -71,6 +72,13 @@ $(function () {
         }
 
         $('#login-form')[0].reset();
+    });
+
+    $('#log-out').on('click', function() {
+        $('.entry-reg-container').show();
+        $('#log-out').hide();
+        $('.logged-user-data').hide();
+        sessionStorage.removeItem('loggedUserId');
     });
 });
 
