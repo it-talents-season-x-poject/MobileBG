@@ -246,13 +246,16 @@ $(function () {
             return true;
         });
 
-        let currentSection = $('<section class="ads-part"></section>');
         $('.ad-container > h5').html('Резултати от търсенето <a href="javacript:;" id="clear-res">Изчисти</a>');
-        let count = 1;
-        $('#last-ad-container').html('');
+        if (searched.length < 1) {
+            $('#last-ad-container').html('Няма намерени резултати!');
+        } else {
+            let currentSection = $('<section class="ads-part"></section>');
+            let count = 1;
+            $('#last-ad-container').html('');
 
-        for (let i = 0; i < searched.length; i++) {
-            currentSection.append($(`<div>
+            for (let i = 0; i < searched.length; i++) {
+                currentSection.append($(`<div>
         <div style="background-image: url('${searched[i].image}')" class="img ad-vechicle-img"></div>
         <div class="ad-vechicle-info">
             <p class="car-name">${searched[i].make} ${searched[i].model}</p>
@@ -260,16 +263,18 @@ $(function () {
             <p>${searched[i].kilometres}км.</p>
         </div>
     </div>`));
-            if (count % 3 === 0 || i === searched.length - 1) {
-                $('#last-ad-container').append(currentSection);
-                currentSection = $('<section class="ads-part"></section>');
-            }
+                if (count % 3 === 0 || i === searched.length - 1) {
+                    $('#last-ad-container').append(currentSection);
+                    currentSection = $('<section class="ads-part"></section>');
+                }
 
-            count++;
+                count++;
+            }
         }
     });
 
-    $('body').on('click', '#clear-res', function() {
+    $('body').on('click', '#clear-res', function () {
+        $('.article-search > form')[0].reset();
         loadLastCars();
     });
 });
