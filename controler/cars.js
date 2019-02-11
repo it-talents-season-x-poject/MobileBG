@@ -66,6 +66,7 @@ $(function() {
 
 
     $("#cars").on("click",function(event){
+        $(window).scrollTop(0);
         var category="cars"
         $("select#category").val("cars");
         var makeSelect = $('#make');
@@ -86,6 +87,7 @@ $(function() {
     });
 
     $("#trucks").on("click",function(event){
+        $(window).scrollTop(0);
         var category='trucks';
         $("select#category").val("trucks");
         var makeSelect = $('#make');
@@ -106,6 +108,7 @@ $(function() {
     })
 
     $("#motorcycles").on("click",function(event){
+        $(window).scrollTop(0);
         var category="motorcycles"
         $("select#category").val("motorcycles");
         var makeSelect = $('#make');
@@ -126,6 +129,7 @@ $(function() {
     });
 
     $("#bicycles").on("click",function(event){
+        $(window).scrollTop(0);
         var category="bicycles"
         $("select#category").val("bicycles");
         var makeSelect = $('#make');
