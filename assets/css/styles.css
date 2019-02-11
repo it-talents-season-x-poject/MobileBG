@@ -566,7 +566,6 @@ div#flags div {
     display: inline-block;
     font-family: "Times New Roman", Times, serif;
     border-radius: 5px;
-<<<<<<< Updated upstream
     cursor: pointer;
 }
 
@@ -596,7 +595,6 @@ div#flags div {
 .car-name {
     margin-top: 0;
     font-weight: bold;
-=======
 }
 
 #search{
@@ -618,5 +616,4 @@ div#flags div {
 .category-search{
     flex-direction: column;
     flex:1;
->>>>>>> Stashed changes
 }
