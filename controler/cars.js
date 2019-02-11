@@ -151,4 +151,12 @@ $(function() {
         event.preventDefault();
         $('#category').val($(this).data('category')).change();
     });
+
+    $('#add-btn').on('click', function() {
+        if (sessionStorage.getItem('loggedUserId')) {
+            window.location.href = 'publication.html';
+        } else {
+            openPage('entry', $('#login-tab'), 'black');
+        }
+    });
 });
