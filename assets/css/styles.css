@@ -486,6 +486,16 @@ article {
     flex-direction: row;
 }
 
+.last-ad-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.last-ad-container > section {
+    display: flex;
+    flex-direction: row;
+}
+
 #boxes {
     width: 1100px;
     margin-top: 10px;
