@@ -173,7 +173,7 @@ $(function () {
         sectionCars = $(`<div>
         <div style="background-image: url('${lastSixCars[i].image}')" class="img ad-vechicle-img"></div>
         <div class="ad-vechicle-info">
-            <p class="car-name">${lastSixCars[i].title}</p>
+            <p class="car-name">${lastSixCars[i].make} ${lastSixCars[i].model}</p>
             <p>${lastSixCars[i].price}лв.</p>
             <p>${lastSixCars[i].kilometres}км.</p>
         </div>
@@ -187,5 +187,59 @@ $(function () {
 
     $('#last-ad-container').append(sectionOne).append(sectionTwo);
 
+    $('.btn-search').on('click', function (event) {
+        event.preventDefault();
+        let category = $('#category').val();
+        let make = $('#make').val();
+        let model = $('#model').val();
+        let maxPrice = $('#max-price').val();
+        let year = $('#year').val();
+        let serched = JSON.parse(localStorage.getItem(category));
 
+        serched = serched.filter(v => {
+            if (make !== 'all' && v.make.toLowerCase() !== make.toLowerCase()) {
+                return false;
+            }
+
+            if (model !== 'all' && v.model.toLowerCase() !== model.toLowerCase()) {
+                return false;
+            }
+
+            if (maxPrice.trim() !== '' && v.price > maxPrice) {
+                return false;
+            }
+
+            if (year !== 'all' && v.manufacturedYear < year) {
+                return false;
+            }
+
+            if (category === 'bicycles') {
+                let city = $('#city').val();
+                let gear = $('#gear').val();
+
+                if (city !== 'all' && v.city.toLowerCase() !== city.toLowerCase()) {
+                    return false;
+                }
+    
+                if (gear !== 'all' && v.gearbox !== gear) {
+                    return false;
+                }
+            } else {
+                let engine = $('#engine').val();
+                let gearbox = $('#gearbox').val();
+
+                if (engine !== 'all' && v.engine.toLowerCase() !== engine.toLowerCase()) {
+                    return false;
+                }
+    
+                if (gearbox !== 'all' && v.gearbox.toLowerCase() !== gearbox.toLowerCase()) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+
+        console.log(serched);
+    });
 });

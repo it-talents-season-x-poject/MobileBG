@@ -40,9 +40,10 @@ var vehicleStorage = (function () {
     var num = 1;
 
     class Vehicle {
-        constructor(title, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation) {
+        constructor(make, model, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation) {
             this.id = num++;
-            this.title = title;
+            this.make = make;
+            this.model = model;
             this.image = image;
             this.price = price;
             this.kilometres = kilometres;
@@ -58,22 +59,22 @@ var vehicleStorage = (function () {
 
     function createDefaultVechicleAds() {
         const vechicleItems = [
-            new Vehicle('Audi A5', '../assets/images/audi-a5.jpg', 20000, 140000, 'София', 2010, 'Дизелов', 'Автоматична', 'сив', ''),
-            new Vehicle('BMW X3', '../assets/images/bmw-x3.jpg', 25000, 100000, 'Пловдив', 2016, 'Бензинов', 'Автоматична', 'син', ''),
-            new Vehicle('Citroen C3', '../assets/images/citroen-c3.jpg', 27000, 140000, 'София', 2019, 'Дизелов', 'Ръчна', 'бял', ''),
-            new Vehicle('Ferrari Testarossa', '../assets/images/ferrari-testarossa.jpg', 17000, 240000, 'София', 2010, 'Бензинов', 'Ръчна', 'червен', ''),
-            new Vehicle('Hyundai Accent', '../assets/images/hyundai-accent.jpg', 30000, 50000, 'София', 2018, 'Дизелов', 'Автоматична', 'червен', ''),
-            new Vehicle('Volkswagen Polo', '../assets/images/volkswagen-polo.jpg', 16000, 10000, 'София', 2017, 'Бензинов', 'Ръчна', 'оранжев', '')
+            new Vehicle('Audi', 'A5', '../assets/images/audi-a5.jpg', 20000, 140000, 'София', 2010, 'Дизелов', 'Автоматична', 'сив', ''),
+            new Vehicle('BMW', 'X3', '../assets/images/bmw-x3.jpg', 25000, 100000, 'Пловдив', 2016, 'Бензинов', 'Автоматична', 'син', ''),
+            new Vehicle('Citroen', 'C3', '../assets/images/citroen-c3.jpg', 27000, 140000, 'София', 2019, 'Дизелов', 'Ръчна', 'бял', ''),
+            new Vehicle('Ferrari', 'Testarossa', '../assets/images/ferrari-testarossa.jpg', 17000, 240000, 'София', 2010, 'Бензинов', 'Ръчна', 'червен', ''),
+            new Vehicle('Hyundai', 'Accent', '../assets/images/hyundai-accent.jpg', 30000, 50000, 'София', 2018, 'Дизелов', 'Автоматична', 'червен', ''),
+            new Vehicle('VW', 'Polo', '../assets/images/volkswagen-polo.jpg', 16000, 10000, 'София', 2017, 'Бензинов', 'Ръчна', 'оранжев', '')
         ]
 
-        localStorage.setItem('carList', JSON.stringify(vechicleItems));
+        localStorage.setItem('cars', JSON.stringify(vechicleItems));
     }
 
-    if (!localStorage.getItem('carList')) {
+    if (!localStorage.getItem('cars')) {
         createDefaultVechicleAds();
     }
 
-    var carList = JSON.parse(localStorage.getItem('carList'));
+    var carList = JSON.parse(localStorage.getItem('cars'));
     var motorcycleList = [];
     var truckList = [];
     var bicyckleList = [];
