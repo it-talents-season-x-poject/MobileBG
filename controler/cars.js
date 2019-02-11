@@ -164,13 +164,14 @@ $(function () {
         }
     });
 
-    const LAST_CARS_COUNT = 6;
-    let lastSixCars = vehicleStorage.getLastCars(LAST_CARS_COUNT);
-    let sectionOne = $('<section class="ads-part"></section>');
-    let sectionTwo = $('<section class="ads-part"></section>');
-    let sectionCars = '';
-    for (let i = 0; i < lastSixCars.length; i++) {
-        sectionCars = $(`<div>
+    function loadLastCars() {
+        const LAST_CARS_COUNT = 6;
+        let lastSixCars = vehicleStorage.getLastCars(LAST_CARS_COUNT);
+        let sectionOne = $('<section class="ads-part"></section>');
+        let sectionTwo = $('<section class="ads-part"></section>');
+        let sectionCars = '';
+        for (let i = 0; i < lastSixCars.length; i++) {
+            sectionCars = $(`<div>
         <div style="background-image: url('${lastSixCars[i].image}')" class="img ad-vechicle-img"></div>
         <div class="ad-vechicle-info">
             <p class="car-name">${lastSixCars[i].make} ${lastSixCars[i].model}</p>
@@ -178,14 +179,19 @@ $(function () {
             <p>${lastSixCars[i].kilometres}км.</p>
         </div>
     </div>`);
-        if (i <= 2) {
-            sectionOne.append(sectionCars);
-        } else {
-            sectionTwo.append(sectionCars);
+            if (i <= 2) {
+                sectionOne.append(sectionCars);
+            } else {
+                sectionTwo.append(sectionCars);
+            }
         }
+
+        $('.ad-container > h5').html('Най-новите обяви за Автомобили и Джипове');
+        $('#last-ad-container').html('');
+        $('#last-ad-container').append(sectionOne).append(sectionTwo);
     }
 
-    $('#last-ad-container').append(sectionOne).append(sectionTwo);
+    loadLastCars();
 
     $('.btn-search').on('click', function (event) {
         event.preventDefault();
@@ -194,9 +200,9 @@ $(function () {
         let model = $('#model').val();
         let maxPrice = $('#max-price').val();
         let year = $('#year').val();
-        let serched = JSON.parse(localStorage.getItem(category));
+        let searched = JSON.parse(localStorage.getItem(category));
 
-        serched = serched.filter(v => {
+        searched = searched.filter(v => {
             if (make !== 'all' && v.make.toLowerCase() !== make.toLowerCase()) {
                 return false;
             }
@@ -220,7 +226,7 @@ $(function () {
                 if (city !== 'all' && v.city.toLowerCase() !== city.toLowerCase()) {
                     return false;
                 }
-    
+
                 if (gear !== 'all' && v.gearbox !== gear) {
                     return false;
                 }
@@ -231,7 +237,7 @@ $(function () {
                 if (engine !== 'all' && v.engine.toLowerCase() !== engine.toLowerCase()) {
                     return false;
                 }
-    
+
                 if (gearbox !== 'all' && v.gearbox.toLowerCase() !== gearbox.toLowerCase()) {
                     return false;
                 }
@@ -240,6 +246,30 @@ $(function () {
             return true;
         });
 
-        console.log(serched);
+        let currentSection = $('<section class="ads-part"></section>');
+        $('.ad-container > h5').html('Резултати от търсенето <a href="javacript:;" id="clear-res">Изчисти</a>');
+        let count = 1;
+        $('#last-ad-container').html('');
+
+        for (let i = 0; i < searched.length; i++) {
+            currentSection.append($(`<div>
+        <div style="background-image: url('${searched[i].image}')" class="img ad-vechicle-img"></div>
+        <div class="ad-vechicle-info">
+            <p class="car-name">${searched[i].make} ${searched[i].model}</p>
+            <p>${searched[i].price}лв.</p>
+            <p>${searched[i].kilometres}км.</p>
+        </div>
+    </div>`));
+            if (count % 3 === 0 || i === searched.length - 1) {
+                $('#last-ad-container').append(currentSection);
+                currentSection = $('<section class="ads-part"></section>');
+            }
+
+            count++;
+        }
+    });
+
+    $('body').on('click', '#clear-res', function() {
+        loadLastCars();
     });
 });
