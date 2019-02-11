@@ -373,6 +373,7 @@ article {
 .last-ad-container {
     border-top: 5px solid rgb(0, 162, 239);
     display: flex;
+    padding: 10px 0;
 }
 
 .ad-edit {
@@ -498,11 +499,13 @@ article {
 }
 
 .img {
-    height: 200px;
-    width: 350px;
+    height: 160px;
+    width: 250px;
     background-position-x: center;
     background-position-y: center;
     background-size: cover; 
+    margin-right: 20px;
+    border-radius: 5px;
 }
 
 #boxes {
@@ -564,4 +567,32 @@ div#flags div {
     font-family: "Times New Roman", Times, serif;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.ads-part {
+    padding-bottom: 10px;
+}
+
+.ads-part div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ads-part > div {
+    flex-direction: row;
+    flex: 1;
+}
+
+.ad-vechicle-info {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ad-vechicle-info > p {
+    margin: 6px 0;
+}
+
+.car-name {
+    margin-top: 0;
+    font-weight: bold;
 }
