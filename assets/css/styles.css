@@ -617,3 +617,18 @@ div#flags div {
     flex-direction: column;
     flex:1;
 }
+.category-container-search > div {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+}
+#ready-to-publish > button {
+    width:400px;
+    height: 50px;
+    border-radius: 5px;
+    right:0;
+    bottom:0;
+    float: right;
+    margin-left: 40px;
+    margin-top:50px;
+}
