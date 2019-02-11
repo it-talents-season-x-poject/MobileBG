@@ -546,7 +546,7 @@ div#flags div {
     text-decoration: none;
 }
 
-#main-categories{
+#main-categories {
     font-family: "Times New Roman", Times, serif;
     background-color: white;
     border-top:5px solid rgb(0, 162, 239);
@@ -563,4 +563,5 @@ div#flags div {
     display: inline-block;
     font-family: "Times New Roman", Times, serif;
     border-radius: 5px;
+    cursor: pointer;
 }
