@@ -158,7 +158,7 @@ $(function () {
 
     $('#add-btn').on('click', function () {
         if (sessionStorage.getItem('loggedUserId')) {
-            window.location.href = 'publication.html';
+            window.location.href = 'Publish.html';
         } else {
             openPage('entry', $('#login-tab'), 'black');
         }
