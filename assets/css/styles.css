@@ -526,3 +526,40 @@ div#flags div {
     width: 300px;
     float: left;
 }
+
+#copyright{
+    float:right;
+    margin-right: 5px;
+}
+
+#necessary-links{
+    font-family: "Times New Roman", Times, serif;
+    background-color: rgb(0, 162, 239);
+    margin-top: 10px;
+    padding:3px;
+    
+}
+
+#necessary-links > a{
+    color: white;
+    margin-left:3px;
+    text-decoration: none;
+}
+
+#main-categories{
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    border-top:5px solid rgb(0, 162, 239);
+    flex:left;
+    
+}
+
+#main-categories > button {
+    background-color: lightgrey; /* Green */
+    border: none;
+    color: black;
+    padding:10px;
+    text-align: center;
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+}
