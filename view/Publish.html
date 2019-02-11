@@ -15,6 +15,7 @@
     <script src="../model/availableCarsStorage.js"></script>
     <script src="../controler/cars.js"></script>
     <script src="../model/properties.js"></script>
+    <script src="../controler/getPublication.js"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
                     <h5>Търсене в MOBILE.BG -
                         <span id="search-title">Автомобили и Джипове</span>
                     </h5>
-                    <form action="">
+                    <form id="specialform" action="">
                         <div class="category-search">
                             <div class="category-container-search">
                                 <div class="category-selector-container">
@@ -104,7 +105,7 @@
                                 </div>
                                 &nbsp;&nbsp;&nbsp;
                                 <div>
-                                    <label for="modification" class="search-type">Модификация</label>
+                                    <label for="modification" class="search-type" id="modification">Модификация</label>
                                     <input type="text">
                                 </div>
                                 <div class="engine-container">
@@ -159,7 +160,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="seats" class="search-type">Брой места</label>
+                                    <label id="numberSeats" for="seats" class="search-type">Брой места</label>
                                     <input type="text">
                                 </div>
                             </div>
