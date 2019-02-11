@@ -562,4 +562,5 @@ div#flags div {
     text-align: center;
     display: inline-block;
     font-family: "Times New Roman", Times, serif;
+    border-radius: 5px;
 }
