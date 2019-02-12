@@ -34,13 +34,13 @@
             <nav class="main-navigation">
                 <ul>
                     <li>
-                        <a href="">Начало</a>
+                        <a href="../view/index.html">Начало</a>
                     </li>
                     <li>
-                        <a href="">Публикуване</a>
+                        <a href="../view/Publish.html">Публикуване</a>
                     </li>
                     <li>
-                        <a href="">Търсене</a>
+                        <a href="../view/Search.html">Търсене</a>
                     </li>
                     <li>
                         <a target="_blank" rel="noopener noreferrer" href="https://fakti.bg/avto">Новини</a>
@@ -105,8 +105,8 @@
                                 </div>
                                 &nbsp;&nbsp;&nbsp;
                                 <div>
-                                    <label for="modification" class="search-type" id="modification">Модификация</label>
-                                    <input type="text">
+                                    <label for="modification" class="search-type">Модификация</label>
+                                    <input id="modification" type="text">
                                 </div>
                                 <div class="engine-container">
                                     <label for="engine" class="search-type">Двигател</label>
@@ -122,11 +122,13 @@
                                     <label for="" class="search-type">Състояние</label>
 
                                     <div>
-                                        <input type="checkbox" name="state-new" id="state-new">
+                                        <input type="checkbox" class="state" text="Нов" name="state-new" id="state-new">
                                         <label for="state-new" class="red">Нов</label>
-                                        <input type="checkbox" name="state-used" id="state-used">
+                                        <input type="checkbox" class="state" text="Употребяван" name="state-used"
+                                            id="state-used">
                                         <label for="state-used" class="red">Употребяван</label>
-                                        <input type="checkbox" name="state-apart" id="state-apart">
+                                        <input type="checkbox" class="state" text="На части" name="state-apart"
+                                            id="state-apart">
                                         <label for="state-apart" class="red">На части</label>
                                     </div>
                                 </div>
@@ -135,7 +137,7 @@
                             <div class="category-container-search">
                                 <div>
                                     <label for="power" class="search-type">Мощност</label>
-                                    <input type="text">
+                                    <input id="power" type="text">
                                 </div>
                                 <div>
                                     <label for="eurostandart" class="search-type">Евростандарт</label>
@@ -160,18 +162,18 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label id="numberSeats" for="seats" class="search-type">Брой места</label>
-                                    <input type="text">
+                                    <label for="seats" class="search-type">Брой места</label>
+                                    <input id="numberSeats" type="text">
                                 </div>
                             </div>
                             <div class="category-container-search">
                                 <div>
                                     <label for="price" class="search-type">Цена</label>
-                                    <input type="text">
+                                    <input id="price" type="text">
                                 </div>
                                 <div>
                                     <label for="currency" class="search-type">Валута</label>
-                                    <select name="currency" id="eurostandart">
+                                    <select name="currency" id="currency">
                                         <option value="none" selected></option>
                                         <option value="lv">Лв.</option>
                                         <option value="usd">USD</option>
@@ -181,26 +183,26 @@
                                 &nbsp;&nbsp;&nbsp;
                                 <div>
                                     <label for="dateOfProduction" class="search-type">Дата на производство</label>
-                                    <input type="text">
+                                    <input id="ProductionDate" type="text">
                                 </div>
                                 <div>
                                     <label for="kilometres" class="search-type">Пробег(в хил. километри)</label>
-                                    <input type="text">
+                                    <input id="kilometres" type="text">
                                 </div>
                             </div>
                             <div class="category-container-search">
                                 <div>
                                     <label for="color" class="search-type">Цвят</label>
-                                    <input type="text">
+                                    <input id="color" type="text">
                                 </div>
                                 <div>
                                     <label for="country" class="search-type">Държава</label>
-                                    <input type="text">
+                                    <input id="country" type="text">
                                 </div>
                                 &nbsp;&nbsp;&nbsp;
                                 <div>
                                     <label for="city" class="search-type">Град</label>
-                                    <input type="text">
+                                    <input id="city" type="text">
                                 </div>
                                 <div>
                                     <label for="validFor" class="search-type">Валидност на обявата</label>
@@ -213,14 +215,12 @@
                             <div class="category-container-search">
                                 <div id="flags"></div>
                             </div>
-                            <div id="search">
-                                <button id="search">Търсене</button>
-                            </div>
                         </div>
                         <div class="category-container-search">
                             <div>
                                 <label for="Info" class="search-type"> Допълнителна информация </label>
-                                <textarea cols="36" name="f24" rows="10" wrap="virtual" maxlength="5500" class="sw300">
+                                <textarea id="moreInformation" cols="36" name="f24" rows="10" wrap="virtual"
+                                    maxlength="5500" class="sw300">
                                 </textarea>
                                 <p>Моля, не пишете телефони в това поле!
                                     Ако желате да публикувате повече от един телефон в обявата си, направете я VIP или
@@ -240,6 +240,10 @@
 
                             </div>
                             <div id="ready-to-publish">
+                                <form action="/action_page.php">
+                                    <input type="file" name="pic" accept="image/*">
+                                    <input type="submit">
+                                </form>
                                 <label>
                                     <input type="checkbox" name="chkcond" value="1"> Съгласен съм с <a
                                         href="https://www.mobile.bg/pcgi/mobile.cgi?act=9&mode=4" class="iconLinks"
