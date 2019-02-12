@@ -98,19 +98,19 @@ var vehicleStorage = (function () {
     return {
         addVehicle: function (make, model,image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties) {
             let newVehicle=new Vehicle(make, model,image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties);
-            if(newVehicle.category==="cars"){
+            if(newVehicle.category=="cars"){
                 carList.push(newVehicle);
-                localStorage.setItem('cars',JSON.stringify(carList));
+                localStorage.setItem('cars', JSON.stringify(carList));
             }
-            if(newVehicle.category==="motorcycles"){
+            if(newVehicle.category=="motorcycles"){
                 motorcycleList.push(newVehicle);
                 localStorage.setItem('motorcycles', JSON.stringify(motorcycleList))  ;
             }
-            if(newVehicle.category==="trucks"){
+            if(newVehicle.category=="trucks"){
                 truckList.push(newVehicle);
                 localStorage.setItem('trucks',JSON.stringify(truckList));
             }
-            if(newVehicle.category==="bicycles"){
+            if(newVehicle.category=="bicycles"){
                 bicyckleList.push(newVehicle);
                localStorage.setItem('bicycles', JSON.stringify(bicyckleList));
             }

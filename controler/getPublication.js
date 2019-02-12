@@ -1,4 +1,8 @@
 $(function () {
+    $("#conditions").click(function (e) {
+        $("#publish").attr("disabled", !this.checked);
+    });
+    
     $("#publish").on("click", function (event) {
         event.preventDefault();
 
