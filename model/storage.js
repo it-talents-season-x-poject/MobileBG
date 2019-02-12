@@ -40,7 +40,7 @@ var vehicleStorage = (function () {
     var num = 1;
 
     class Vehicle {
-        constructor(make, model, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation) {
+        constructor(make, model, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties) {
             this.id = num++;
             this.make = make;
             this.model = model;
@@ -53,6 +53,16 @@ var vehicleStorage = (function () {
             this.gearbox = gearbox;
             this.color = color;
             this.moreInformation = moreInformation;
+            this.modification=modification;
+            this.state=state;
+            this.power=power;
+            this.eurostandart=eurostandart;
+            this.numberSeats=numberSeats;
+            this.currency=currency;
+            this.country=country;
+            this.validFor=validFor;
+            this.category=category;
+            this.properties=properties;
             this.date = new Date();
         }
     }
@@ -80,8 +90,24 @@ var vehicleStorage = (function () {
     var bicyckleList = [];
 
     return {
-        addVehicle: function (title, img, price, kilometres, city) {
-            return
+        addVehicle: function (make, model,image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties) {
+            let newVehicle=new Vehicle(make, model,image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties);
+            if(newVehicle.category==="cars"){
+                carList.push(newVehicle);
+                JSON.stringify(localStorage.setItem('cars',carList));
+            }
+            if(newVehicle.category==="motorcycles"){
+                motorcycleList.push(newVehicle);
+                JSON.stringify(localStorage.setItem('motorcycles', motorcycleList))  ;
+            }
+            if(newVehicle.category==="trucks"){
+                truckList.push(newVehicle);
+                JSON.stringify(localStorage.setItem('trucks',truckList));
+            }
+            if(newVehicle.category==="bicycles"){
+                motorcycleList.push(newVehicle);
+                JSON.stringify(localStorage.setItem('bicycles',bicyckleList));
+            }
         },
 
         getLastCars: (n) => {
