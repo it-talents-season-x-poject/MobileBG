@@ -105,7 +105,7 @@ var vehicleStorage = (function () {
                 JSON.stringify(localStorage.setItem('trucks',truckList));
             }
             if(newVehicle.category==="bicycles"){
-                motorcycleList.push(newVehicle);
+                bicyckleList.push(newVehicle);
                 JSON.stringify(localStorage.setItem('bicycles',bicyckleList));
             }
         },
