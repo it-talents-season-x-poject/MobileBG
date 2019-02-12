@@ -6,6 +6,7 @@ var userStorage = (function () {
             this.id = num++;
             this.email = email;
             this.password = password;
+            this.ads = [];
         }
     }
 
@@ -41,7 +42,12 @@ var vehicleStorage = (function () {
 
     class Vehicle {
         constructor(make, model, image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties) {
-            this.id = num++;
+            let storedVehicles = JSON.parse(localStorage.getItem(category));
+            if (storedVehicles) {
+                this.id = storedVehicles[storedVehicles.length - 1].id + 1;
+            } else {
+                this.id = num++;
+            }
             this.make = make;
             this.model = model;
             this.image = image;

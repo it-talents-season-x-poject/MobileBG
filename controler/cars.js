@@ -164,6 +164,14 @@ $(function () {
         }
     });
 
+    $('.edit-btn').on('click', function () {
+        if (sessionStorage.getItem('loggedUserId')) {          
+            alert('Вие сте логнати, но трябва да видите списъка с обявите си!');
+        } else {
+            openPage('entry', $('#login-tab'), 'black');
+        }
+    });
+    
     function loadLastCars() {
         const LAST_CARS_COUNT = 6;
         let lastSixCars = vehicleStorage.getLastCars(LAST_CARS_COUNT);
