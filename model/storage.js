@@ -94,19 +94,19 @@ var vehicleStorage = (function () {
             let newVehicle=new Vehicle(make, model,image, price, kilometres, city, manufacturedYear, engine, gearbox, color, moreInformation,modification,state,power,eurostandart,numberSeats,currency,country,validFor,category,properties);
             if(newVehicle.category==="cars"){
                 carList.push(newVehicle);
-                JSON.stringify(localStorage.setItem('cars',carList));
+                localStorage.setItem('cars',JSON.stringify(carList));
             }
             if(newVehicle.category==="motorcycles"){
                 motorcycleList.push(newVehicle);
-                JSON.stringify(localStorage.setItem('motorcycles', motorcycleList))  ;
+                localStorage.setItem('motorcycles', JSON.stringify(motorcycleList))  ;
             }
             if(newVehicle.category==="trucks"){
                 truckList.push(newVehicle);
-                JSON.stringify(localStorage.setItem('trucks',truckList));
+                localStorage.setItem('trucks',JSON.stringify(truckList));
             }
             if(newVehicle.category==="bicycles"){
                 bicyckleList.push(newVehicle);
-                JSON.stringify(localStorage.setItem('bicycles',bicyckleList));
+               localStorage.setItem('bicycles', JSON.stringify(bicyckleList));
             }
         },
 
