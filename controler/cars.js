@@ -202,52 +202,54 @@ $(function () {
         let year = $('#year').val();
         let searched = JSON.parse(localStorage.getItem(category));
 
-        searched = searched.filter(v => {
-            if (make !== 'all' && v.make.toLowerCase() !== make.toLowerCase()) {
-                return false;
-            }
-
-            if (model !== 'all' && v.model.toLowerCase() !== model.toLowerCase()) {
-                return false;
-            }
-
-            if (maxPrice.trim() !== '' && v.price > maxPrice) {
-                return false;
-            }
-
-            if (year !== 'all' && v.manufacturedYear < year) {
-                return false;
-            }
-
-            if (category === 'bicycles') {
-                let city = $('#city').val();
-                let gear = $('#gear').val();
-
-                if (city !== 'all' && v.city.toLowerCase() !== city.toLowerCase()) {
+        if (searched && searched !== null && searched.length > 0) {
+            searched = searched.filter(v => {
+                if (make !== 'all' && v.make.toLowerCase() !== make.toLowerCase()) {
                     return false;
                 }
 
-                if (gear !== 'all' && v.gearbox !== gear) {
-                    return false;
-                }
-            } else {
-                let engine = $('#engine').val();
-                let gearbox = $('#gearbox').val();
-
-                if (engine !== 'all' && v.engine.toLowerCase() !== engine.toLowerCase()) {
+                if (model !== 'all' && v.model.toLowerCase() !== model.toLowerCase()) {
                     return false;
                 }
 
-                if (gearbox !== 'all' && v.gearbox.toLowerCase() !== gearbox.toLowerCase()) {
+                if (maxPrice.trim() !== '' && v.price > maxPrice) {
                     return false;
                 }
-            }
 
-            return true;
-        });
+                if (year !== 'all' && v.manufacturedYear < year) {
+                    return false;
+                }
+
+                if (category === 'bicycles') {
+                    let city = $('#city').val();
+                    let gear = $('#gear').val();
+
+                    if (city !== 'all' && v.city.toLowerCase() !== city.toLowerCase()) {
+                        return false;
+                    }
+
+                    if (gear !== 'all' && v.gearbox !== gear) {
+                        return false;
+                    }
+                } else {
+                    let engine = $('#engine').val();
+                    let gearbox = $('#gearbox').val();
+
+                    if (engine !== 'all' && v.engine.toLowerCase() !== engine.toLowerCase()) {
+                        return false;
+                    }
+
+                    if (gearbox !== 'all' && v.gearbox.toLowerCase() !== gearbox.toLowerCase()) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+        }
 
         $('.ad-container > h5').html('Резултати от търсенето <a href="javacript:;" id="clear-res">Изчисти</a>');
-        if (searched.length < 1) {
+        if (!searched || searched.length < 1) {
             $('#last-ad-container').html('Няма намерени резултати!');
         } else {
             let currentSection = $('<section class="ads-part"></section>');

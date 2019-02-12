@@ -315,7 +315,6 @@ article {
 
 .users-entrance {
     border: 1px solid  rgb(151, 150, 150);
-    width: 29vw;
 }
 
 .users-entrance > p {
@@ -632,3 +631,36 @@ div#flags div {
     margin-left: 40px;
     margin-top:50px;
 }
+
+@media screen and (max-width: 600px) {
+    header,  main > nav > ul, .articles, .category-search > div, .category-search > div.category-container, .hot-hot-news, .entrance-container > div, #priceContainer, .last-ad-container > section, .ads-part > div, .category-container-search {
+        flex-direction: column;
+    }
+
+    main > nav.secondary-navigation > ul {
+        flex-direction: row;
+    }
+
+    main > nav.main-navigation {
+        height: auto;
+    }
+
+    main > nav.main-navigation > ul > li > a {
+        width: 100%;
+        display: flex;
+        border-radius: unset;
+    }
+
+    main > nav.main-navigation > ul {
+        width: 100%;
+    }
+
+    .news-area, .entrance {
+        margin-left: 0; 
+    }
+
+    .btn-search {
+        width: 100%;
+        margin-top: 15px;
+    }
+  }

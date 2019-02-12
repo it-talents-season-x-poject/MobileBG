@@ -1,4 +1,4 @@
-const PASS_VALIDATION = new RegExp('(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}');
+// const PASS_VALIDATION = new RegExp('(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}', 'g');
 
 $(function () {
     function handleLoggedUser(loggedUser) {
@@ -30,12 +30,13 @@ $(function () {
             $('#email-container > .error').text('');
         }
 
-        if (!PASS_VALIDATION.test($('#pass').val())) {
-            hasError = true;
-            $('#password-container > .error').text('Incorrect password!');
-        } else {
-            $('#password-container > .error').text('');
-        }
+        // if (!PASS_VALIDATION.test($('#pass').val())) {
+        //     console.log(PASS_VALIDATION, password)
+        //     hasError = true;
+        //     $('#password-container > .error').text('Incorrect password!');
+        // } else {
+        //     $('#password-container > .error').text('');
+        // }
 
         if (password !== confirmPass) {
             hasError = true;
